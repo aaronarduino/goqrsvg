@@ -50,3 +50,4 @@ func circle(w http.ResponseWriter, req *http.Request) {
 ```
 
 ## Documentation:
+See [GoDoc](https://godoc.org/github.com/aaronarduino/goqrsvg)
