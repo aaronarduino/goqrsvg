@@ -26,14 +26,14 @@ import (
 )
 
 func main() {
-  http.Handle("/", http.HandlerFunc(circle))
+  http.Handle("/", http.HandlerFunc(barcodeCreate))
   err := http.ListenAndServe(":2003", nil)
   if err != nil {
     log.Fatal("ListenAndServe:", err)
   }
 }
 
-func circle(w http.ResponseWriter, req *http.Request) {
+func barcodeCreate(w http.ResponseWriter, req *http.Request) {
   w.Header().Set("Content-Type", "image/svg+xml")
   s := svg.New(w)
 
